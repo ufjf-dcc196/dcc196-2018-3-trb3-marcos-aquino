@@ -8,4 +8,7 @@
     <string name="lbl_telefone">Telefone</string>
     <string name="act_cadastrar">Cadastrar</string>
     <string name="act_cancelar">Cancelar</string>
+    <string name="title_aviso">Aviso!</string>
+    <string name="msg_campos_invalidos">Existem campos vazios ou inválidos.</string>
+    <string name="lbl_ok">Ok</string>
 </resources>
