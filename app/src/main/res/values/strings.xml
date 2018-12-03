@@ -8,7 +8,7 @@
     <string name="lbl_local">Local</string>
     <string name="lbl_contato">Contato</string>
     <string name="act_cadastrar">Cadastrar</string>
-    <string name="act_cancelar">Cancelar</string>
+    <string name="act_excluir">Excluir</string>
     <string name="title_aviso">Aviso!</string>
     <string name="msg_campos_invalidos">Existem campos vazios ou inválidos.</string>
     <string name="lbl_ok">Ok</string>

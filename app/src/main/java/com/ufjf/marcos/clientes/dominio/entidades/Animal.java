@@ -1,6 +1,8 @@
 package com.ufjf.marcos.clientes.dominio.entidades;
 
-public class Animal {
+import java.io.Serializable;
+
+public class Animal implements Serializable {
 
     public int codigo;
     public String especie;
@@ -8,5 +10,11 @@ public class Animal {
     public String idade;
     public String local;
     public String contato;
+
+    public Animal(){
+
+        codigo = 0;
+
+    }
 
 }

@@ -7,7 +7,7 @@
         android:title="@string/act_cadastrar"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/actCancelar"
-        android:title="@string/act_cancelar"
+        android:id="@+id/actExcluir"
+        android:title="@string/act_excluir"
         app:showAsAction="ifRoom" />
 </menu>

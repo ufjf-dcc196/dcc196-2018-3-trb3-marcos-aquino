@@ -47,6 +47,7 @@ public class Cadastro extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         edtEspecie = (EditText) findViewById(R.id.edtEspecie);
         edtRaca = (EditText) findViewById(R.id.edtRaca);
@@ -58,6 +59,32 @@ public class Cadastro extends AppCompatActivity {
 
 
         criarConexao();
+        verificaParametro();
+    }
+
+    private void verificaParametro() {    // verifica parametros recebidos
+
+        Bundle bundle = getIntent().getExtras();
+
+        animal = new Animal();
+
+        if ((bundle != null) && (bundle.containsKey("ANIMAL"))) {
+
+            animal = (Animal) bundle.getSerializable("ANIMAL");
+
+            edtEspecie.setText(animal.especie);
+            edtRaca.setText(animal.raca);
+            edtIdade.setText(animal.idade);
+            edtLocal.setText(animal.local);
+            edtContato.setText(animal.contato);
+
+//            txtTituloAtual.setText(evento.titulo);
+//            txtFacilitadorAtual.setText(evento.facilitador);
+//            txtDataAtual.setText(evento.data);
+//            txtHorarioAtual.setText(evento.hora);
+//            txtDescricaoAtual.setText(evento.descricao);
+
+        }
     }
 
 
@@ -89,14 +116,20 @@ public class Cadastro extends AppCompatActivity {
 
     private void confirmar(){
 
-        animal = new Animal();
 
         if(!validaCampos()){
 
             try{
 
-                animalRepositorio.inserirAnimal(animal);
+                if(animal.codigo == 0) {
 
+                    animalRepositorio.inserirAnimal(animal);
+                    Toast.makeText(this, "Animal Cadastrado!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    animalRepositorio.alterarAnimal(animal);
+                    Toast.makeText(this, "Animal editado!", Toast.LENGTH_SHORT).show();
+                }
                 finish();
 
 
@@ -212,6 +245,10 @@ public class Cadastro extends AppCompatActivity {
         inflater.inflate(R.menu.menu_cadastro, menu);
 
         return super.onCreateOptionsMenu(menu);
+
+
+
+
     }
 
     @Override
@@ -221,13 +258,20 @@ public class Cadastro extends AppCompatActivity {
 
         switch (id){
 
-            case R.id.actCadastrar:
-                confirmar();
-                Toast.makeText(this, "Animal Cadastrado!", Toast.LENGTH_SHORT).show();
+
+            case android.R.id.home:
+                finish();
                 break;
 
-            case R.id.actCancelar:
-                Toast.makeText(this, "Cadastro cancelado!", Toast.LENGTH_SHORT).show();
+            case R.id.actCadastrar:
+                confirmar();
+                break;
+
+            case R.id.actExcluir:
+
+                animalRepositorio.excluirAnimal(animal.codigo);
+
+                Toast.makeText(this, "Animal excluído!", Toast.LENGTH_SHORT).show();
                 finish();     // finaliza a atividade
 
 
