@@ -12,4 +12,7 @@
     <string name="title_aviso">Aviso!</string>
     <string name="msg_campos_invalidos">Existem campos vazios ou inválidos.</string>
     <string name="lbl_ok">Ok</string>
+    <string name="lbl_boas_vindas">Bem-Vindo!</string>
+    <string name="action_ok">OK</string>
+    <string name="title_erro">Erro</string>
 </resources>
