@@ -223,11 +223,11 @@ public class Cadastro extends AppCompatActivity {
 
             case R.id.actCadastrar:
                 confirmar();
-                Toast.makeText(this, "Botão cadastrar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Animal Cadastrado!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.actCancelar:
-                Toast.makeText(this, "Botão cancelar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Cadastro cancelado!", Toast.LENGTH_SHORT).show();
                 finish();     // finaliza a atividade
 
 

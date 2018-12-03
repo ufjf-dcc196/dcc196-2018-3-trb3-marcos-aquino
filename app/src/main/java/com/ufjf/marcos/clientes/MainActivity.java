@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -91,8 +92,17 @@ public class MainActivity extends AppCompatActivity {
     public void cadastrar(View view) {
 
         Intent it = new Intent(MainActivity.this, Cadastro.class);
-        startActivity(it);
+        startActivityForResult(it, 0);
 
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        List<Animal> dados = animalRepositorio.buscarAnimais();
+        animalAdapter = new AnimalAdapter(dados);
+        lstAnimais.setAdapter(animalAdapter);
+
+    }
 }
