@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">Clientes</string>
-    <string name="title_activity_main">Clientes</string>
+    <string name="app_name">Adote</string>
+    <string name="title_activity_main">Adote</string>
     <string name="title_activity_cadastro">Cadastro</string>
-    <string name="lbl_nome">Nome</string>
-    <string name="lbl_endereco">Endereço</string>
-    <string name="lbl_email">Email</string>
-    <string name="lbl_telefone">Telefone</string>
+    <string name="lbl_especie">Espécie</string>
+    <string name="lbl_raca">Raça</string>
+    <string name="lbl_idade">Idade</string>
+    <string name="lbl_local">Local</string>
+    <string name="lbl_contato">Contato</string>
     <string name="act_cadastrar">Cadastrar</string>
     <string name="act_cancelar">Cancelar</string>
     <string name="title_aviso">Aviso!</string>

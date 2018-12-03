@@ -15,7 +15,7 @@ public class BancoOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL(ScriptDLL.getCreateTableCliente());
+        db.execSQL(ScriptDLL.getCreateTableAnimal());
 
     }
 

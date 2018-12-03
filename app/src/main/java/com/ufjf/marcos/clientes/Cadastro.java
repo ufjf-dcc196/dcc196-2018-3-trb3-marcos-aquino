@@ -1,8 +1,6 @@
 package com.ufjf.marcos.clientes;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,16 +9,16 @@ import android.util.Patterns;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class Cadastro extends AppCompatActivity {
 
-    private EditText edtNome;
-    private EditText edtEndereco;
-    private EditText edtEmail;
-    private EditText edtTelefone;
+    private EditText edtEspecie;
+    private EditText edtRaca;
+    private EditText edtIdade;
+    private EditText edtLocal;
+    private EditText edtContato;
 
 
     @Override
@@ -32,10 +30,11 @@ public class Cadastro extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        edtNome = (EditText) findViewById(R.id.edtNome);
-        edtEndereco = (EditText) findViewById(R.id.edtEndereco);
-        edtEmail = (EditText) findViewById(R.id.edtEmail);
-        edtTelefone = (EditText) findViewById(R.id.edtTelefone);
+        edtEspecie = (EditText) findViewById(R.id.edtEspecie);
+        edtRaca = (EditText) findViewById(R.id.edtRaca);
+        edtIdade = (EditText) findViewById(R.id.edtIdade);
+        edtLocal = (EditText) findViewById(R.id.edtLocal);
+        edtContato = (EditText) findViewById(R.id.edtContato);
     }
 
     // valida todos os campos do cadastro
@@ -43,26 +42,31 @@ public class Cadastro extends AppCompatActivity {
 
         boolean res = false;
 
-        String nome = edtNome.getText().toString();
-        String endereco = edtEndereco.getText().toString();
-        String email = edtEmail.getText().toString();
-        String telefone = edtTelefone.getText().toString();
+        String especie = edtEspecie.getText().toString();
+        String raca = edtRaca.getText().toString();
+        String idade = edtIdade.getText().toString();
+        String local = edtLocal.getText().toString();
+        String contato = edtContato.getText().toString();
 
-        if(res = isCampoVazio(nome)){
-            edtNome.requestFocus();
+        if(res = isCampoVazio(especie)){
+            edtEspecie.requestFocus();
         }
         else
-            if(res = isCampoVazio(endereco)){
-                edtEndereco.requestFocus();
+            if(res = isCampoVazio(raca)){
+                edtRaca.requestFocus();
             }
             else
-                if(res = !isEmailValido(email)){
-                    edtEmail.requestFocus();
+                if(res = isCampoVazio(idade)){
+                    edtIdade.requestFocus();
                 }
                 else
-                    if(res = isCampoVazio(telefone)){
-                        edtTelefone.requestFocus();
+                    if(res = isCampoVazio(local)){
+                        edtLocal.requestFocus();
                     }
+                    else
+                        if(res = isCampoVazio(contato)){
+                            edtContato.requestFocus();
+                        }
 
         if(res){
 
@@ -81,12 +85,12 @@ public class Cadastro extends AppCompatActivity {
         return resultado;
     }
 
-    // verifica se o email é válido
-    private boolean isEmailValido(String email){
-
-        boolean resultado = ( !isCampoVazio(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches() );
-        return resultado;
-    }
+//    // verifica se o email é válido
+//    private boolean isEmailValido(String email){
+//
+//        boolean resultado = ( !isCampoVazio(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches() );
+//        return resultado;
+//    }
 
 
 

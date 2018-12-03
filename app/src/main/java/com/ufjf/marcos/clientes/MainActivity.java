@@ -11,7 +11,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView lstClientes;
+    private RecyclerView lstAnimais;
     private FloatingActionButton fab;
 
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
 
-        lstClientes = (RecyclerView) findViewById(R.id.lstClientes);
+        lstAnimais = (RecyclerView) findViewById(R.id.lstAnimais);
 
        /* fab.setOnClickListener(new View.OnClickListener() {
             @Override

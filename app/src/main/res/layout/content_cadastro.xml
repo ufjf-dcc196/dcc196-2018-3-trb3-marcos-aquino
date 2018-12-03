@@ -9,7 +9,7 @@
     tools:showIn="@layout/activity_cadastro">
 
     <TextView
-        android:id="@+id/txtNome"
+        android:id="@+id/txtEspecie"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -17,79 +17,100 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/lbl_nome"
+        android:text="@string/lbl_especie"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtNome"
+        android:id="@+id/edtEspecie"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/txtNome"
-        app:layout_constraintStart_toStartOf="@+id/txtNome"
-        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+        app:layout_constraintEnd_toEndOf="@+id/txtEspecie"
+        app:layout_constraintStart_toStartOf="@+id/txtEspecie"
+        app:layout_constraintTop_toBottomOf="@+id/txtEspecie" />
 
     <TextView
-        android:id="@+id/txtEndereco"
+        android:id="@+id/txtRaca"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/lbl_endereco"
-        app:layout_constraintEnd_toEndOf="@+id/edtNome"
-        app:layout_constraintStart_toStartOf="@+id/edtNome"
-        app:layout_constraintTop_toBottomOf="@+id/edtNome" />
+        android:text="@string/lbl_raca"
+        app:layout_constraintEnd_toEndOf="@+id/edtEspecie"
+        app:layout_constraintStart_toStartOf="@+id/edtEspecie"
+        app:layout_constraintTop_toBottomOf="@+id/edtEspecie" />
 
     <EditText
-        android:id="@+id/edtEndereco"
+        android:id="@+id/edtRaca"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/txtEndereco"
-        app:layout_constraintStart_toStartOf="@+id/txtEndereco"
-        app:layout_constraintTop_toBottomOf="@+id/txtEndereco" />
+        app:layout_constraintEnd_toEndOf="@+id/txtRaca"
+        app:layout_constraintStart_toStartOf="@+id/txtRaca"
+        app:layout_constraintTop_toBottomOf="@+id/txtRaca" />
 
     <TextView
-        android:id="@+id/txtEmail"
+        android:id="@+id/txtIdade"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/lbl_email"
-        app:layout_constraintEnd_toEndOf="@+id/edtEndereco"
-        app:layout_constraintStart_toStartOf="@+id/edtEndereco"
-        app:layout_constraintTop_toBottomOf="@+id/edtEndereco" />
+        android:text="@string/lbl_idade"
+        app:layout_constraintEnd_toEndOf="@+id/edtRaca"
+        app:layout_constraintStart_toStartOf="@+id/edtRaca"
+        app:layout_constraintTop_toBottomOf="@+id/edtRaca" />
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/edtIdade"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/txtEmail"
-        app:layout_constraintStart_toStartOf="@+id/txtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtRaca"
+        app:layout_constraintStart_toStartOf="@+id/edtRaca"
+        app:layout_constraintTop_toBottomOf="@+id/txtIdade" />
 
     <TextView
-        android:id="@+id/txtTelefone"
+        android:id="@+id/txtLocal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/lbl_telefone"
-        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
-        app:layout_constraintStart_toStartOf="@+id/edtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        android:text="@string/lbl_local"
+        app:layout_constraintEnd_toEndOf="@+id/txtIdade"
+        app:layout_constraintStart_toStartOf="@+id/txtIdade"
+        app:layout_constraintTop_toBottomOf="@+id/edtIdade" />
 
     <EditText
-        android:id="@+id/edtTelefone"
+        android:id="@+id/edtLocal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="@+id/txtTelefone"
-        app:layout_constraintStart_toStartOf="@+id/txtTelefone"
-        app:layout_constraintTop_toBottomOf="@+id/txtTelefone" />
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtIdade"
+        app:layout_constraintStart_toStartOf="@+id/edtIdade"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocal" />
+
+    <TextView
+        android:id="@+id/txtContato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/lbl_contato"
+        app:layout_constraintEnd_toEndOf="@+id/txtLocal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtLocal"
+        app:layout_constraintTop_toBottomOf="@+id/edtLocal" />
+
+    <EditText
+        android:id="@+id/edtContato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtLocal"
+        app:layout_constraintStart_toStartOf="@+id/edtLocal"
+        app:layout_constraintTop_toBottomOf="@+id/txtContato" />
 
 </android.support.constraint.ConstraintLayout>
